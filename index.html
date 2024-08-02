@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js/Json代码格式化工具</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&display=swap">
+</head>
+<body class="noto-sans-sc-regular">
+    <h1 class="noto-sans-sc-bold">Js/Json 代码格式化工具</h1>
+    <div class="container">
+        <div class="column">
+            <textarea id="input" placeholder="将 JSON 或 JavaScript 代码粘贴到这里..." class="noto-sans-sc-regular"></textarea>
+        </div>
+        <div class="controls">
+            <label for="file-input" class="file-upload-button noto-sans-sc-regular">选择文件</label>
+            <input type="file" id="file-input" class="file-input">
+            <button id="format-button" class="noto-sans-sc-regular">格式化</button>
+            <button id="copy-button" class="noto-sans-sc-regular">复制格式化结果</button>
+            <button id="clear-fields-button" class="noto-sans-sc-regular">清空</button>
+            <button id="download-button" class="noto-sans-sc-regular">下载结果</button>
+        </div>
+        <div class="column">
+            <textarea id="output" placeholder="格式化后的结果将显示在这里..." readonly class="noto-sans-sc-regular"></textarea>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="js_beautify.js"></script>
+</body>
+</html>

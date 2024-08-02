@@ -1,0 +1,183 @@
+body {
+    font-family: "Noto Sans SC", sans-serif;
+    padding: 20px;
+    margin: 0;
+    background-color: #ffffff; /* 默认背景色 */
+    color: #000000; /* 默认文字颜色 */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px; /* 增大标题与下方元素之间的距离 */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    height: calc(100vh - 60px); /* 视口高度减去其他部分的高度 */
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    height: 40vh; /* 高度为视口高度的 40% */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 12px; /* 增大圆角半径 */
+    box-sizing: border-box;
+    font-family: "Noto Sans SC", sans-serif;
+    line-height: 1.5;
+    background-color: #ffffff; /* 默认背景色 */
+    color: #000000; /* 默认文字颜色 */
+    transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+}
+
+button, .file-upload-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 12px; /* 增大圆角半径 */
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px; /* 增大按钮之间的间距 */
+    font-family: "Noto Sans SC", sans-serif;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease, border-radius 0.3s;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+button:hover, .file-upload-button:hover {
+    background-color: #45a049;
+}
+
+button:active, .file-upload-button:active {
+    background-color: #388e3c;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* 阴影扩散效果 */
+    transform: translateY(2px); /* 按钮下沉效果 */
+}
+
+/* 隐藏原生文件输入控件 */
+.file-input {
+    display: none;
+}
+
+/* 样式化文件上传按钮 */
+.file-upload-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 12px; /* 增大圆角半径 */
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+textarea[readonly] {
+    background-color: #f9f9f9;
+    color: #000000; /* 只读文本颜色 */
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        height: auto; /* 在小屏幕上调整高度 */
+    }
+
+    textarea {
+        height: 30vh; /* 在小屏幕上减少高度 */
+    }
+
+    .controls {
+        margin: 10px 0;
+    }
+
+    #json-input-container, #json-output-container {
+        margin-bottom: 10px;
+    }
+
+    #json-output-container {
+        order: 1;
+    }
+
+    .controls {
+        order: 2;
+    }
+
+    #json-input-container {
+        order: 3;
+    }
+}
+
+.noto-sans-sc-light {
+    font-family: "Noto Sans SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.noto-sans-sc-regular {
+    font-family: "Noto Sans SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.noto-sans-sc-bold {
+    font-family: "Noto Sans SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.noto-sans-sc-black {
+    font-family: "Noto Sans SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* 暗色模式样式 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1b1b1f; /* 暗色背景 */
+        color: #fffff5db; /* 暗色文字颜色 */
+    }
+
+    textarea {
+        background-color: #333333; /* 暗色背景 */
+        color: #e0e0e0; /* 暗色文字颜色 */
+        border: 1px solid #555555; /* 暗色边框 */
+    }
+
+    button, .file-upload-button {
+        background-color: #4CAF50; /* 按钮颜色保持不变 */
+        color: white;
+    }
+
+    button:hover, .file-upload-button:hover {
+        background-color: #45a049; /* 按钮悬停颜色保持不变 */
+    }
+
+    button:active, .file-upload-button:active {
+        background-color: #388e3c; /* 按钮激活颜色保持不变 */
+    }
+
+    textarea[readonly] {
+        background-color: #444444; /* 暗色只读背景 */
+    }
+}
